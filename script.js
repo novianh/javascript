@@ -1,19 +1,15 @@
-//  Execution Context, Hoisting & Scope
-// hoisting menaikkan variabel dan function ke atas
+//last array
 
+var arr = [1, 2, 3, "ayam", 'chiken'];
 
-function a() {
-    console.log('ini a');
-
-    function b() {
-        console.log('ini b');
-
-        function c() {
-            console.log('ini c');
-        }
-
-        c();
-    }
-    b();
+function lastArr(arrIn) {
+	for (var i = 0; i < arrIn.length; i++) {
+		if (i == arrIn.length-1) {
+			let result = arr[i];
+			return result;
+		}
+	}
 }
-a();
+
+
+console.log(lastArr(arr));
